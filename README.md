@@ -26,7 +26,7 @@ Std::vector<double> Solve(double a, double b){
 
 `其它任意情况，已经编程处理并做完测试。`
 
-`**下载本git repository 的文件 "main_星衡科技-算法笔试第4题.cpp" 运行测试**`
+`**可下载本 git repository 文件 "main_星衡科技-算法笔试第4题.cpp" 运行测试**`
 ```cpp
 #include<iostream>
 #include<vector>
@@ -34,7 +34,7 @@ Std::vector<double> Solve(double a, double b){
 #include<math.h>
 using namespace std;
 
-// solve this eq: a＊x + b * sin x = 0
+// solve this eq: a * x + b * sin x = 0
 // 这题出的有问题，当 a = 0的时候有无穷个解，vector根本装不下。
 // 经过验证，这份解答的精度比mathematica(一个专业的数学软件)还要高。
 
