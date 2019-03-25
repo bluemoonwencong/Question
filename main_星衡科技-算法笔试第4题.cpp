@@ -4,9 +4,10 @@
 #include<math.h>
 using namespace std;
 
-// solve this eq: a＊x + b * sin x = 0
-// 这题出的有问题，当 a = 0的时候有无穷个解，vector根本装不下。
-// 经过验证，这份解答的精度比mathematica(一个专业的数学软件)还要高。
+// 解方程： a * x + b * sin x = 0
+// 这题出的有问题，当 a = 0的时候有无穷个解，vector这种数据结构根本装不下。
+// 经过验证，以下解答的精度比mathematica(一个专业的数学软件)更好，
+// 验证方法是让直线恰好快要与正弦曲线相切，观察此时的解。
 
 double two_divide(double left, double right, double k, double is_up);
 vector<double> Solve(double a, double b);
@@ -24,9 +25,9 @@ int main() {
 		cout << *iter << endl;
 	}
 	
-	//cout << "sol.size(): " << sol.size() << endl;
-	//cout << "PI, sin(PI): " << PI << "," << sin(PI) << endl;
-	//system("pause");
+	cout << "sol.size(): " << sol.size() << endl;
+	cout << "PI, sin(PI): " << PI << "," << sin(PI) << endl;
+	system("pause");
 	return 0;
 }
 

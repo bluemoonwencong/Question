@@ -9,7 +9,7 @@ from itertools import permutations
 # itertools是一个数据挖掘工作会经常用到的包
 # permutations返回可迭代对象的排列
 def pythonic(n):
-    ret = set(list(permutations([1]*n + [2]*n, 2*n)))
+    ret = set(list(permutations([1]*(n-1) + [2]*(n-1), 2*(n-1))))
     return len(ret), ret
 ```
 
