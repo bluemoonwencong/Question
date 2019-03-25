@@ -26,7 +26,12 @@ Std::vector<double> Solve(double a, double b){
 
 `其它任意情况，已经编程处理并做完测试。`
 
-`**可下载本 git repository 文件 "main_星衡科技-算法笔试第4题.cpp" 运行测试**`
+`经过验证，这份解答的精度比mathematica(一个专业的数学软件)还要高。验证方法是使得斜率比1小但极度接近1，观察解的个数和解的值，从这个角度，以下解法比mma的精度高。具体验证操作：固定 b = 100，扫描 a = -99.99999999999, ... 99.9999999999999999，观察mathematica和以下程序的输出。`
+
+`**下载本 git repository 文件 "main_星衡科技-算法笔试第4题.cpp" 运行**`
+
+`**下载本 git repository 文件 "main_星衡科技-算法笔试第4题.nb" 测试，本文件需要mathematica环境支持**`
+
 ```cpp
 #include<iostream>
 #include<vector>
@@ -35,8 +40,6 @@ Std::vector<double> Solve(double a, double b){
 using namespace std;
 
 // solve this eq: a * x + b * sin x = 0
-// 这题出的有问题，当 a = 0的时候有无穷个解，vector根本装不下。
-// 经过验证，这份解答的精度比mathematica(一个专业的数学软件)还要高。
 
 double two_divide(double left, double right, double k, double is_up);
 vector<double> Solve(double a, double b);
@@ -54,9 +57,9 @@ int main() {
 		cout << *iter << endl;
 	}
 	
-	//cout << "sol.size(): " << sol.size() << endl;
+	cout << "sol.size(): " << sol.size() << endl;
 	//cout << "PI, sin(PI): " << PI << "," << sin(PI) << endl;
-	//system("pause");
+	system("pause");
 	return 0;
 }
 
@@ -140,6 +143,7 @@ double two_divide(double left, double right, double k, double is_up) {
 	}
 	return (left + right) / 2;
 }
+
 ```
 
 ### 5. （探索题）你会用什么样的方法提取遥感图像中的道路呢（包括主街道、田埂、小路）。示例如下：白色明显道路是大路，深绿色田埂也属于需要提取的区域。
